@@ -1,12 +1,13 @@
 import os
 
+# Configurações da Aplicação
 class Config:
-    SECRET_KEY = os.environ.get('SECRET_KEY', 'sua_chave_secreta')
-    CACHE_TYPE = 'simple'
-    SWAGGER = {
-        'title': 'Catálogo de Receitas Gourmet',
-        'uiversion': 3
-    }
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', 'sqlite:///recipes.db')
+    SECRET_KEY = 'sua_chave_secreta'
+    SQLALCHEMY_DATABASE_URI = (
+    'mssql+pyodbc://sa:Yehoshua2025@localhost:1433/master?driver=ODBC+Driver+17+for+SQL+Server'
+)
+
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY', 'sua_chave_jwt_secreta')
+    SWAGGER = {'title': 'Catálogo de Receitas Gourmet', 'uiversion': 3}
+    CACHE_TYPE = 'simple'
+    CACHE_DEFAULT_TIMEOUT = 300  # Tempo de expiração do cache em segundos (opcional)
