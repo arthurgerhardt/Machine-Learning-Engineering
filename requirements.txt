@@ -12,7 +12,7 @@ SQLAlchemy==2.0.23
 Flask-Migrate==4.0.5
 Flask-Script==2.0.6
 alembic==1.12.0
-pydantic==2.7.3
+pydantic[email]==2.7.3  # Inclui email-validator
 
 # ========================
 # Bibliotecas Básicas de IA / Machine Learning
